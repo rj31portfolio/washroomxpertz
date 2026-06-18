@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Washroom Expert</title>
+  <meta name="description" content="Premium bathroom design and delivery experience with a modern white, black, and teal visual identity.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="hero-shell">
+    <div class="hero-overlay"></div>
+    <div class="site-header" id="siteHeader">
+      <div class="container topbar">
+        <div class="topbar-links">
+          <a href="tel:+918873779202">+91 8873779202</a>
+          <a href="#partner">Partner with Us</a>
+          <a href="#refer">Refer and Earn</a>
+        </div>
+        <a class="consult-btn desktop-only" href="#consult">Free Consult Now</a>
+      </div>
+
+      <div class="container navbar">
+        <a class="brand" href="index.html" aria-label="Washroom Expert home">
+          <img src="assets/images/logo-xpert.png" alt="Washroom Expert" class="brand-mark">
+        </a>
+
+        <nav class="nav-links" id="navMenu" aria-label="Primary">
+          <a href="#work">How We Work</a>
+          <a href="#catalogue">Design Catalogue</a>
+          <a href="#projects">Projects Delivered</a>
+        </nav>
+
+        <div class="nav-actions">
+          <!-- <button class="icon-btn" type="button" aria-label="Search">
+            <span class="icon-search"></span>
+          </button> -->
+          <button class="menu-btn" type="button" id="menuToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+      <div class="mobile-drawer-inner">
+        <button class="drawer-close" type="button" id="drawerClose" aria-label="Close menu">
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="drawer-nav" aria-label="Mobile">
+          <a href="#about">About Us</a>
+          <a href="#contact">Contact Us</a>
+          <a href="#faq">FAQ</a>
+          <a href="#career">Career</a>
+          <a href="#blog">Blog</a>
+        </nav>
+
+        <a class="drawer-cta" href="#consult">Free Consult Now</a>
+
+        <div class="drawer-social">
+          <p>Follow us</p>
+          <div class="social-list">
+            <a href="#" aria-label="Instagram">ig</a>
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="X">x</a>
+            <a href="#" aria-label="YouTube">yt</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Luxury bathroom solutions for modern homes</p>
+        <h1>Bring your dream bathroom to life at the comfort of your home with our Xpertz.</h1>
+        <p class="hero-text">From concept to installation, we create refined washroom spaces with transparent pricing, fast coordination, and premium finishes.</p>
+        <div class="hero-cta">
+          <a class="primary-btn" href="#consult">Schedule a Call</a>
+          <a class="secondary-btn" href="#catalogue">View Catalogue</a>
+        </div>
+      </div>
+
+      <div class="lead-card" id="consult">
+        <h2>Your Perfect Bathroom Is Just a Click Away</h2>
+        <form class="lead-form">
+          <div class="input-row">
+            <label>
+              <span class="sr-only">First Name</span>
+              <input type="text" name="first_name" placeholder="First Name *" required>
+            </label>
+            <label>
+              <span class="sr-only">Last Name</span>
+              <input type="text" name="last_name" placeholder="Last Name *" required>
+            </label>
+          </div>
+          <label>
+            <span class="sr-only">Email</span>
+            <input type="email" name="email" placeholder="Email Id*" required>
+          </label>
+          <label>
+            <span class="sr-only">Phone Number</span>
+            <input type="tel" name="phone" placeholder="Contact Number *" required>
+          </label>
+          <label class="check-row">
+            <input type="checkbox" name="policy" required>
+            <span>By submitting this form, you agree to the privacy policy &amp; terms and conditions</span>
+          </label>
+          <button class="submit-btn" type="submit">Submit Request</button>
+          <p class="form-note" id="formMessage" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="reviews-section" id="projects">
+      <div class="container reviews-wrap">
+        <div class="google-score-card">
+          <div class="google-mark" aria-hidden="true">
+            <span class="g-cut"></span>
+            <span class="g-bar"></span>
+          </div>
+          <div class="score-line">
+            <strong>4.6</strong>
+            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          </div>
+        </div>
+
+        <button class="review-arrow" id="reviewPrev" type="button" aria-label="Previous review">&larr;</button>
+
+        <article class="review-card" id="reviewCard">
+          <div class="review-head">
+            <div class="review-avatar" id="reviewAvatar">IK</div>
+            <div>
+              <h3 id="reviewName">Inder Kapoor</h3>
+              <p id="reviewCount">3 reviews</p>
+              <div class="review-meta">
+                <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <span id="reviewTime">4 months ago</span>
+              </div>
+            </div>
+          </div>
+          <p class="review-text" id="reviewText">
+            I turned to Bathxpertz to remodel 2 Toilets and Dresser Room at our Apartment in Vipul Belmonte,
+            Golf Course Road, Sector 53 Gurugram. From concept to site supervision, the work got completed on
+            time. The finished product looks more beautiful than projected. Excellent teamwork at Bathxpertz
+            helped realise a long cherished desire to upgrade our humble living to 7 stars.
+          </p>
+        </article>
+
+        <button class="review-arrow" id="reviewNext" type="button" aria-label="Next review">&rarr;</button>
+      </div>
+    </section>
+
+    <section class="catalogue-section" id="catalogue">
+      <div class="container">
+        <div class="catalogue-head">
+          <div>
+            <p class="catalogue-kicker">Our Design Catalogue</p>
+            <h2>Browse styles crafted for every bathroom size and mood.</h2>
+          </div>
+          <div class="catalogue-controls">
+            <button class="catalogue-arrow" id="cataloguePrev" type="button" aria-label="Previous catalogue slide">&#8592;</button>
+            <button class="catalogue-arrow" id="catalogueNext" type="button" aria-label="Next catalogue slide">&#8594;</button>
+          </div>
+        </div>
+
+        <div class="catalogue-viewport">
+          <div class="catalogue-track" id="catalogueTrack">
+            <div class="catalogue-slide">
+              <article class="catalogue-card" style="--card-pos: 18% center;">
+                <div class="catalogue-card-inner">
+                  <div class="catalogue-card-copy">
+                    <h3>Aspire</h3>
+                    <a href="#consult">Discover Now</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="catalogue-card" style="--card-pos: 46% center;">
+                <div class="catalogue-card-inner">
+                  <div class="catalogue-card-copy">
+                    <h3>Regular</h3>
+                    <a href="#consult">Discover Now</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="catalogue-card" style="--card-pos: 82% 28%;">
+                <div class="catalogue-card-inner">
+                  <div class="catalogue-card-copy">
+                    <h3>Powder Washroom</h3>
+                    <a href="#consult">Discover Now</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="catalogue-card" style="--card-pos: 30% 72%;">
+                <div class="catalogue-card-inner">
+                  <div class="catalogue-card-copy">
+                    <h3>Luxe</h3>
+                    <a href="#consult">Discover Now</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="catalogue-card" style="--card-pos: 58% 64%;">
+                <div class="catalogue-card-inner">
+                  <div class="catalogue-card-copy">
+                    <h3>Space Saving Bathroom</h3>
+                    <a href="#consult">Discover Now</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="catalogue-card" style="--card-pos: 92% 72%;">
+                <div class="catalogue-card-inner">
+                  <div class="catalogue-card-copy">
+                    <h3>Kids Bathrooms</h3>
+                    <a href="#consult">Discover Now</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="catalogue-slide">
+              <article class="catalogue-card" style="--card-pos: 12% 24%;">
+                <div class="catalogue-card-inner">
+                  <div class="catalogue-card-copy">
+                    <h3>Minimal</h3>
+                    <a href="#consult">Discover Now</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="catalogue-card" style="--card-pos: 44% 18%;">
+                <div class="catalogue-card-inner">
+                  <div class="catalogue-card-copy">
+                    <h3>Contemporary</h3>
+                    <a href="#consult">Discover Now</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="catalogue-card" style="--card-pos: 74% 36%;">
+                <div class="catalogue-card-inner">
+                  <div class="catalogue-card-copy">
+                    <h3>Marble Luxe</h3>
+                    <a href="#consult">Discover Now</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="catalogue-card" style="--card-pos: 22% 82%;">
+                <div class="catalogue-card-inner">
+                  <div class="catalogue-card-copy">
+                    <h3>Guest Bath</h3>
+                    <a href="#consult">Discover Now</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="catalogue-card" style="--card-pos: 52% 76%;">
+                <div class="catalogue-card-inner">
+                  <div class="catalogue-card-copy">
+                    <h3>Urban Zen</h3>
+                    <a href="#consult">Discover Now</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="catalogue-card" style="--card-pos: 88% 80%;">
+                <div class="catalogue-card-inner">
+                  <div class="catalogue-card-copy">
+                    <h3>Family Bath</h3>
+                    <a href="#consult">Discover Now</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div class="catalogue-dots" id="catalogueDots" aria-label="Catalogue slide navigation"></div>
+      </div>
+    </section>
+
+    <section class="care-section" id="about">
+      <div class="container care-grid">
+        <div class="care-visual care-visual-left">
+          <div class="care-image-card tall-image"></div>
+          <div class="care-visual-stack">
+            <div class="care-image-card wide-image"></div>
+            <div class="care-image-card compact-image"></div>
+          </div>
+          <div class="care-floating-note">
+            <strong>Countless Design Options</strong>
+            <span>Crafted layouts, premium fittings, and clean execution.</span>
+          </div>
+        </div>
+
+        <div class="care-content">
+          <p class="care-kicker">We Care for You</p>
+          <h2>Transform your Bathroom with countless design options available to you in our comprehensive catalogue.</h2>
+          <p>
+            From conceptualisation to execution, we are there for you!
+          </p>
+          <p>
+            At BathXpertz, our skilled team of professionals, including bathroom renovation contractors,
+            designers, and planners, excels at maximising the potential of spaces. We focus on creating
+            layouts and enhancing aesthetics to blend practicality with style in each project.
+          </p>
+          <p>
+            Our goal is to bring your vision of a bathroom to life with our top-notch bath renovation services!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-section" id="why-bathxpertz">
+      <div class="container feature-grid">
+        <article class="feature-item">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" role="presentation">
+              <circle cx="22" cy="24" r="10"></circle>
+              <path d="M14 44l10-10 6 6 20-20"></path>
+              <path d="M38 14h12v12"></path>
+              <path d="M12 12h16"></path>
+              <path d="M12 52h40"></path>
+            </svg>
+          </div>
+          <h3>Design Element with BathXpertz</h3>
+          <p>
+            BathXpertz is fast becoming the go-to platform for premium bathroom remodelling services.
+            Our experts understand the value of every inch of space and how to turn it into a perfect
+            solution high in aesthetics and functionality.
+          </p>
+        </article>
+
+        <article class="feature-item">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" role="presentation">
+              <path d="M16 20h26l6 8v18H16z"></path>
+              <path d="M42 20l6-8h8"></path>
+              <path d="M22 42a4 4 0 1 0 0 .1"></path>
+              <path d="M42 42a4 4 0 1 0 0 .1"></path>
+              <path d="M24 20v-6h12v6"></path>
+            </svg>
+          </div>
+          <h3>Delivery Right on Time</h3>
+          <p>
+            Whether you're seeking updates or a complete renovation, buy fittings or fixtures, rest
+            assured, it reaches you right on time. Select from our comprehensive catalogue as per your
+            preference for a timeless aesthetic or a contemporary, sleek design.
+          </p>
+        </article>
+
+        <article class="feature-item">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" role="presentation">
+              <path d="M20 18l8 8-14 14-8-8z"></path>
+              <path d="M36 12l16 16"></path>
+              <path d="M44 10l10 10"></path>
+              <path d="M18 46l-6 6"></path>
+              <path d="M28 28l8-8"></path>
+            </svg>
+          </div>
+          <h3>Expert Installation</h3>
+          <p>
+            As a bathroom expert, we prioritise installing the best-quality fixtures and fittings with
+            utmost craftsmanship. By combining creativity and expertise, we ensure that every corner of
+            your bathroom transforms into your dream space.
+          </p>
+        </article>
+
+        <article class="feature-item">
+          <div class="feature-icon" aria-hidden="true">
+            <svg viewBox="0 0 64 64" role="presentation">
+              <path d="M32 10l18 8v14c0 10-7.2 18.8-18 22-10.8-3.2-18-12-18-22V18z"></path>
+              <path d="M24 31l6 6 10-12"></path>
+            </svg>
+          </div>
+          <h3>Warranty</h3>
+          <p>
+            As a premier bathroom reconstruction and remodelling company, we take pride in delivering
+            you the best-quality materials that comes with warranty.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="footer-overlay"></div>
+    <div class="container footer-grid">
+      <div class="footer-brand-block">
+        <a class="footer-brand" href="index.html" aria-label="Washroom Expert home">
+          <img src="assets/images/logo-xpert.png" alt="Washroom Expert" class="brand-mark footer-brand-mark">
+        </a>
+        <div class="footer-contact">
+          <p>
+            H No. 227-A, Vill- Samaspur,<br>
+            Sector-51, Gurugram,<br>
+            Haryana - 122018
+          </p>
+          <a href="mailto:greenlivinterior@gmail.com">greenlivinterior@gmail.com</a>
+          <a href="tel:+918873779202">+91 8873779202</a>
+          <a href="tel:+918527827427">+91 8527827427</a>
+        </div>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">ig</a>
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="X">x</a>
+          <a href="#" aria-label="YouTube">yt</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+
+      <div class="footer-links-block">
+        <h3>Our Work</h3>
+        <a href="#catalogue">Design Catalogue</a>
+        <a href="#consult">Pricing Calculator</a>
+        <a href="#projects">Completed Projects</a>
+        <a href="#projects">Customer Testimonials</a>
+      </div>
+
+      <div class="footer-links-block">
+        <h3>Company</h3>
+        <a href="#about">About Us</a>
+        <a href="#projects">Our Process</a>
+        <a href="#why-bathxpertz">Xpertz Advantages</a>
+        <a href="#contact">FAQs</a>
+        <a href="#contact">Blog</a>
+      </div>
+
+      <div class="footer-links-block">
+        <h3>For You</h3>
+        <a href="#consult">Pay</a>
+        <a href="#contact">Privacy Policy</a>
+        <a href="#contact">Return Policy</a>
+        <a href="#contact">Terms &amp; Conditions</a>
+        <a href="#contact">Html sitemap</a>
+      </div>
+
+      <div class="footer-links-block">
+        <h3>Get in Touch</h3>
+        <a href="#contact">Career</a>
+        <a href="#contact">Contact Us</a>
+        <a href="#contact">Refer and Earn</a>
+        <a href="#contact">Partner with Us</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>@2026. All Rights reserved.</p>
+    </div>
+  </footer>
+  
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
