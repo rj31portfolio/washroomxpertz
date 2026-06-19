@@ -2267,8 +2267,8 @@ body.drawer-open::before {
   }
 
   .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 28px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px 18px;
     padding: 48px 0 26px;
   }
 
