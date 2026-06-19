@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 90" role="img" aria-labelledby="title">
+  <title>Somany</title>
+  <rect width="260" height="90" rx="20" fill="#fff"/>
+  <text x="30" y="56" font-family="Arial, sans-serif" font-size="40" font-weight="900" fill="#ff1f1f">SOMANY</text>
+  <rect x="212" y="30" width="10" height="10" fill="#27bdf1"/>
+  <rect x="222" y="40" width="10" height="10" fill="#27bdf1"/>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" role="img" aria-labelledby="title">
+  <title>Contact support illustration</title>
+  <rect width="520" height="360" rx="32" fill="#f6faf8"/>
+  <circle cx="348" cy="118" r="56" fill="#8ad0c6"/>
+  <circle cx="352" cy="120" r="48" fill="#71c1b8"/>
+  <rect x="220" y="152" width="170" height="104" rx="20" fill="#92d7cb"/>
+  <rect x="200" y="164" width="170" height="104" rx="20" fill="#b6ece4"/>
+  <rect x="192" y="174" width="152" height="86" rx="14" fill="#5ebdb2"/>
+  <path d="M136 280c18-42 49-69 92-80 53-14 110 4 143 44" fill="none" stroke="#d8efea" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="384" cy="116" r="28" fill="#ffd39c"/>
+  <path d="M364 101c7-17 31-25 47-8 10 10 8 27 4 37-15-8-34-9-51-2-3-9-3-19 0-27z" fill="#eb8a54"/>
+  <rect x="370" y="146" width="34" height="40" rx="14" fill="#f5ae79"/>
+  <path d="M356 178c18 8 43 8 61 0l24 71h-110z" fill="#f5c57d"/>
+  <path d="M294 240l58-34 46 54-28 20z" fill="#6ebbb2"/>
+  <circle cx="224" cy="108" r="48" fill="#9edccf"/>
+  <circle cx="228" cy="112" r="24" fill="#ffd39c"/>
+  <path d="M210 100c4-18 31-29 46-12 8 8 9 20 7 31-18-4-35 3-46 13-8-10-10-22-7-32z" fill="#d16944"/>
+  <rect x="212" y="136" width="30" height="34" rx="12" fill="#f5ae79"/>
+  <path d="M186 186c15-18 50-24 71-8l18 15-30 42-62-20z" fill="#f9cf88"/>
+  <circle cx="448" cy="76" r="16" fill="#dff4ee"/>
+  <text x="442" y="82" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#67b7ac">?</text>
+  <circle cx="162" cy="190" r="13" fill="#dff4ee"/>
+  <text x="157" y="195" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#67b7ac">?</text>
+  <rect x="412" y="120" width="70" height="18" rx="8" fill="#8ed3c8"/>
+  <rect x="416" y="148" width="60" height="12" rx="6" fill="#c4ece4"/>
+  <rect x="116" y="216" width="36" height="36" rx="12" fill="#c4ece4"/>
+  <rect x="126" y="226" width="16" height="16" rx="4" fill="#8ed3c8"/>
+</svg>

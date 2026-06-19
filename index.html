@@ -12,6 +12,7 @@
 </head>
 <body>
   <header class="hero-shell">
+    <img class="hero-bg-media" src="assets/images/hero.jpg" alt="Luxury bathroom interior by Washroom Expert">
     <div class="hero-overlay"></div>
     <div class="site-header" id="siteHeader">
       <div class="container topbar">
@@ -29,7 +30,8 @@
         </a>
 
         <nav class="nav-links" id="navMenu" aria-label="Primary">
-          <a href="#work">How We Work</a>
+          <a href="about.html">About Us</a>
+          <a href="#about">How We Work</a>
           <a href="#catalogue">Design Catalogue</a>
           <a href="#projects">Projects Delivered</a>
         </nav>
@@ -55,8 +57,8 @@
         </button>
 
         <nav class="drawer-nav" aria-label="Mobile">
-          <a href="#about">About Us</a>
-          <a href="#contact">Contact Us</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact Us</a>
           <a href="#faq">FAQ</a>
           <a href="#career">Career</a>
           <a href="#blog">Blog</a>
@@ -67,11 +69,21 @@
         <div class="drawer-social">
           <p>Follow us</p>
           <div class="social-list">
-            <a href="#" aria-label="Instagram">ig</a>
-            <a href="#" aria-label="Facebook">f</a>
-            <a href="#" aria-label="X">x</a>
-            <a href="#" aria-label="YouTube">yt</a>
-            <a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect><circle cx="12" cy="12" r="4.2"></circle><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"></circle></svg>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 20v-6.3h2.4l.4-3h-2.8V8.8c0-.9.3-1.6 1.6-1.6h1.4V4.5c-.3 0-1.1-.1-2.1-.1-2.1 0-3.5 1.3-3.5 3.8v2.5H8.5v3h2.8V20z" fill="currentColor" stroke="none"></path></svg>
+            </a>
+            <a href="#" aria-label="X">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4.5l5.7 7.6L5.4 19.5h2.4l4-5 3.8 5H19l-5.9-7.8 5-7.2h-2.4l-3.6 4.6-3.4-4.6z" fill="currentColor" stroke="none"></path></svg>
+            </a>
+            <a href="#" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12c0 2.1-.2 3.5-.6 4.3-.3.6-.8 1.1-1.5 1.3-.9.3-3 .4-6.9.4s-6-.1-6.9-.4c-.7-.2-1.2-.7-1.5-1.3C3.2 15.5 3 14.1 3 12s.2-3.5.6-4.3c.3-.6.8-1.1 1.5-1.3.9-.3 3-.4 6.9-.4s6 .1 6.9.4c.7.2 1.2.7 1.5 1.3.4.8.6 2.2.6 4.3z" fill="none"></path><path d="M10 8.7v6.6l5.5-3.3z" fill="currentColor" stroke="none"></path></svg>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.2 9.2V19"></path><path d="M6.2 5.8h0"></path><path d="M10.3 19V9.2"></path><path d="M10.3 12.9c0-2.1 1.4-3.7 3.5-3.7 2 0 3.2 1.3 3.2 4V19"></path></svg>
+            </a>
           </div>
         </div>
       </div>
@@ -90,7 +102,7 @@
 
       <div class="lead-card" id="consult">
         <h2>Your Perfect Bathroom Is Just a Click Away</h2>
-        <form class="lead-form">
+        <form class="lead-form" data-demo-form>
           <div class="input-row">
             <label>
               <span class="sr-only">First Name</span>
@@ -176,7 +188,8 @@
         <div class="catalogue-viewport">
           <div class="catalogue-track" id="catalogueTrack">
             <div class="catalogue-slide">
-              <article class="catalogue-card" style="--card-pos: 18% center;">
+              <article class="catalogue-card">
+                <img class="catalogue-card-media" src="assets/images/background.png" alt="Aspire bathroom design">
                 <div class="catalogue-card-inner">
                   <div class="catalogue-card-copy">
                     <h3>Aspire</h3>
@@ -185,7 +198,8 @@
                 </div>
               </article>
 
-              <article class="catalogue-card" style="--card-pos: 46% center;">
+              <article class="catalogue-card">
+                <img class="catalogue-card-media" src="assets/images/hero-bathroom.svg" alt="Regular bathroom design">
                 <div class="catalogue-card-inner">
                   <div class="catalogue-card-copy">
                     <h3>Regular</h3>
@@ -194,7 +208,8 @@
                 </div>
               </article>
 
-              <article class="catalogue-card" style="--card-pos: 82% 28%;">
+              <article class="catalogue-card">
+                <img class="catalogue-card-media" src="assets/images/background.png" alt="Powder washroom concept">
                 <div class="catalogue-card-inner">
                   <div class="catalogue-card-copy">
                     <h3>Powder Washroom</h3>
@@ -203,7 +218,8 @@
                 </div>
               </article>
 
-              <article class="catalogue-card" style="--card-pos: 30% 72%;">
+              <article class="catalogue-card">
+                <img class="catalogue-card-media" src="assets/images/hero-bathroom.svg" alt="Luxe bathroom concept">
                 <div class="catalogue-card-inner">
                   <div class="catalogue-card-copy">
                     <h3>Luxe</h3>
@@ -212,7 +228,8 @@
                 </div>
               </article>
 
-              <article class="catalogue-card" style="--card-pos: 58% 64%;">
+              <article class="catalogue-card">
+                <img class="catalogue-card-media" src="assets/images/background.png" alt="Space saving bathroom design">
                 <div class="catalogue-card-inner">
                   <div class="catalogue-card-copy">
                     <h3>Space Saving Bathroom</h3>
@@ -221,7 +238,8 @@
                 </div>
               </article>
 
-              <article class="catalogue-card" style="--card-pos: 92% 72%;">
+              <article class="catalogue-card">
+                <img class="catalogue-card-media" src="assets/images/hero-bathroom.svg" alt="Kids bathroom design">
                 <div class="catalogue-card-inner">
                   <div class="catalogue-card-copy">
                     <h3>Kids Bathrooms</h3>
@@ -232,7 +250,8 @@
             </div>
 
             <div class="catalogue-slide">
-              <article class="catalogue-card" style="--card-pos: 12% 24%;">
+              <article class="catalogue-card">
+                <img class="catalogue-card-media" src="assets/images/hero-bathroom.svg" alt="Minimal bathroom style">
                 <div class="catalogue-card-inner">
                   <div class="catalogue-card-copy">
                     <h3>Minimal</h3>
@@ -241,7 +260,8 @@
                 </div>
               </article>
 
-              <article class="catalogue-card" style="--card-pos: 44% 18%;">
+              <article class="catalogue-card">
+                <img class="catalogue-card-media" src="assets/images/background.png" alt="Contemporary bathroom style">
                 <div class="catalogue-card-inner">
                   <div class="catalogue-card-copy">
                     <h3>Contemporary</h3>
@@ -250,7 +270,8 @@
                 </div>
               </article>
 
-              <article class="catalogue-card" style="--card-pos: 74% 36%;">
+              <article class="catalogue-card">
+                <img class="catalogue-card-media" src="assets/images/hero-bathroom.svg" alt="Marble luxe bathroom style">
                 <div class="catalogue-card-inner">
                   <div class="catalogue-card-copy">
                     <h3>Marble Luxe</h3>
@@ -259,7 +280,8 @@
                 </div>
               </article>
 
-              <article class="catalogue-card" style="--card-pos: 22% 82%;">
+              <article class="catalogue-card">
+                <img class="catalogue-card-media" src="assets/images/background.png" alt="Guest bath style">
                 <div class="catalogue-card-inner">
                   <div class="catalogue-card-copy">
                     <h3>Guest Bath</h3>
@@ -268,7 +290,8 @@
                 </div>
               </article>
 
-              <article class="catalogue-card" style="--card-pos: 52% 76%;">
+              <article class="catalogue-card">
+                <img class="catalogue-card-media" src="assets/images/hero-bathroom.svg" alt="Urban zen bathroom style">
                 <div class="catalogue-card-inner">
                   <div class="catalogue-card-copy">
                     <h3>Urban Zen</h3>
@@ -277,7 +300,8 @@
                 </div>
               </article>
 
-              <article class="catalogue-card" style="--card-pos: 88% 80%;">
+              <article class="catalogue-card">
+                <img class="catalogue-card-media" src="assets/images/background.png" alt="Family bathroom style">
                 <div class="catalogue-card-inner">
                   <div class="catalogue-card-copy">
                     <h3>Family Bath</h3>
@@ -296,20 +320,26 @@
     <section class="care-section" id="about">
       <div class="container care-grid">
         <div class="care-visual care-visual-left">
-          <div class="care-image-card tall-image"></div>
-          <div class="care-visual-stack">
-            <div class="care-image-card wide-image"></div>
-            <div class="care-image-card compact-image"></div>
+          <div class="care-image-card tall-image">
+            <img class="care-image-media" src="assets/images/we-care-img.png" alt="Bathroom design inspiration">
           </div>
-          <div class="care-floating-note">
+          <div class="care-visual-stack">
+            <div class="care-image-card wide-image">
+              <img class="care-image-media" src="assets/images/wareimg.png" alt="Premium bathroom fittings">
+            </div>
+            <div class="care-image-card compact-image">
+              <img class="care-image-media" src="assets/images/wecareimg3.jfif" alt="Washroom planning example">
+            </div>
+          </div>
+          <!-- <div class="care-floating-note">
             <strong>Countless Design Options</strong>
             <span>Crafted layouts, premium fittings, and clean execution.</span>
-          </div>
+          </div> -->
         </div>
 
         <div class="care-content">
           <p class="care-kicker">We Care for You</p>
-          <h2>Transform your Bathroom with countless design options available to you in our comprehensive catalogue.</h2>
+          <h4>Transform your Bathroom with countless design options available to you in our comprehensive catalogue.</h4>
           <p>
             From conceptualisation to execution, we are there for you!
           </p>
@@ -396,9 +426,66 @@
         </article>
       </div>
     </section>
+
+    <section class="promo-section" id="pricing">
+      <div class="promo-layout">
+        <div class="promo-visual">
+          <img class="promo-visual-media" src="assets/images/about.jpg" alt="Bathroom remodel pricing visual">
+          <span class="promo-dot promo-dot-top"></span>
+          <span class="promo-dot promo-dot-mid"></span>
+          <span class="promo-dot promo-dot-left"></span>
+          <span class="promo-dot promo-dot-bottom"></span>
+          <span class="promo-dot promo-dot-center"></span>
+        </div>
+
+        <div class="promo-content">
+          <div class="promo-content-inner">
+            <h2>Bathroom Remodelling Available at Competitive Prices</h2>
+            <p>
+              If you are looking for high-end bathroom remodelling services, you can look forward to
+              availing high-end services and products available to you at a package cost which you will
+              find tough to believe. This package includes quality fixtures, expert installation, and
+              bespoke luxurious bathroom.
+            </p>
+            <p>
+              Call us today to know the package cost and services. Get in touch with BathXpertz today
+              to schedule a consultation with our team and discuss your requirements.
+            </p>
+            <a class="promo-btn" href="#consult">Enquire Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="partners-section" aria-labelledby="partnersTitle">
+      <div class="container">
+        <div class="partners-head">
+          <h2 id="partnersTitle">Our Partners</h2>
+        </div>
+
+        <div class="partners-slider" aria-label="Partner brands">
+          <div class="partners-track">
+            <div class="partner-logo"><img src="assets/images/partners/asian-paints.svg" alt="Asian Paints"></div>
+            <div class="partner-logo"><img src="assets/images/partners/astral-pipes.svg" alt="Astral Pipes"></div>
+            <div class="partner-logo"><img src="assets/images/partners/myk-laticrete.svg" alt="MYK Laticrete"></div>
+            <div class="partner-logo"><img src="assets/images/partners/kajaria.svg" alt="Kajaria"></div>
+            <div class="partner-logo"><img src="assets/images/partners/somany.svg" alt="Somany"></div>
+            <div class="partner-logo"><img src="assets/images/partners/varmora.svg" alt="Varmora Tiles and Bathware"></div>
+
+            <div class="partner-logo" aria-hidden="true"><img src="assets/images/partners/asian-paints.svg" alt=""></div>
+            <div class="partner-logo" aria-hidden="true"><img src="assets/images/partners/astral-pipes.svg" alt=""></div>
+            <div class="partner-logo" aria-hidden="true"><img src="assets/images/partners/myk-laticrete.svg" alt=""></div>
+            <div class="partner-logo" aria-hidden="true"><img src="assets/images/partners/kajaria.svg" alt=""></div>
+            <div class="partner-logo" aria-hidden="true"><img src="assets/images/partners/somany.svg" alt=""></div>
+            <div class="partner-logo" aria-hidden="true"><img src="assets/images/partners/varmora.svg" alt=""></div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer" id="contact">
+    <img class="footer-bg-media" src="assets/images/bg-footer.jpg" alt="Washroom Expert footer background">
     <div class="footer-overlay"></div>
     <div class="container footer-grid">
       <div class="footer-brand-block">
@@ -416,11 +503,21 @@
           <a href="tel:+918527827427">+91 8527827427</a>
         </div>
         <div class="footer-social">
-          <a href="#" aria-label="Instagram">ig</a>
-          <a href="#" aria-label="Facebook">f</a>
-          <a href="#" aria-label="X">x</a>
-          <a href="#" aria-label="YouTube">yt</a>
-          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect><circle cx="12" cy="12" r="4.2"></circle><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"></circle></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 20v-6.3h2.4l.4-3h-2.8V8.8c0-.9.3-1.6 1.6-1.6h1.4V4.5c-.3 0-1.1-.1-2.1-.1-2.1 0-3.5 1.3-3.5 3.8v2.5H8.5v3h2.8V20z" fill="currentColor" stroke="none"></path></svg>
+          </a>
+          <a href="#" aria-label="X">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4.5l5.7 7.6L5.4 19.5h2.4l4-5 3.8 5H19l-5.9-7.8 5-7.2h-2.4l-3.6 4.6-3.4-4.6z" fill="currentColor" stroke="none"></path></svg>
+          </a>
+          <a href="#" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12c0 2.1-.2 3.5-.6 4.3-.3.6-.8 1.1-1.5 1.3-.9.3-3 .4-6.9.4s-6-.1-6.9-.4c-.7-.2-1.2-.7-1.5-1.3C3.2 15.5 3 14.1 3 12s.2-3.5.6-4.3c.3-.6.8-1.1 1.5-1.3.9-.3 3-.4 6.9-.4s6 .1 6.9.4c.7.2 1.2.7 1.5 1.3.4.8.6 2.2.6 4.3z" fill="none"></path><path d="M10 8.7v6.6l5.5-3.3z" fill="currentColor" stroke="none"></path></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.2 9.2V19"></path><path d="M6.2 5.8h0"></path><path d="M10.3 19V9.2"></path><path d="M10.3 12.9c0-2.1 1.4-3.7 3.5-3.7 2 0 3.2 1.3 3.2 4V19"></path></svg>
+          </a>
         </div>
       </div>
 
@@ -434,7 +531,7 @@
 
       <div class="footer-links-block">
         <h3>Company</h3>
-        <a href="#about">About Us</a>
+        <a href="about.html">About Us</a>
         <a href="#projects">Our Process</a>
         <a href="#why-bathxpertz">Xpertz Advantages</a>
         <a href="#contact">FAQs</a>
@@ -453,7 +550,7 @@
       <div class="footer-links-block">
         <h3>Get in Touch</h3>
         <a href="#contact">Career</a>
-        <a href="#contact">Contact Us</a>
+        <a href="contact.html">Contact Us</a>
         <a href="#contact">Refer and Earn</a>
         <a href="#contact">Partner with Us</a>
       </div>

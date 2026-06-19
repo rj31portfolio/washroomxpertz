@@ -15,8 +15,7 @@ const catalogueTrack = document.getElementById("catalogueTrack");
 const cataloguePrev = document.getElementById("cataloguePrev");
 const catalogueNext = document.getElementById("catalogueNext");
 const catalogueDots = document.getElementById("catalogueDots");
-const form = document.querySelector(".lead-form");
-const formMessage = document.getElementById("formMessage");
+const demoForms = Array.from(document.querySelectorAll("[data-demo-form]"));
 
 const reviews = [
   {
@@ -222,10 +221,18 @@ if (menuToggle && mobileDrawer) {
   });
 }
 
-if (form && formMessage) {
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    formMessage.textContent = "Thanks. Our team will contact you shortly.";
-    form.reset();
+if (demoForms.length) {
+  demoForms.forEach((form) => {
+    const formMessage = form.querySelector(".form-note") || document.getElementById(form.getAttribute("aria-describedby") || "");
+
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+
+      if (formMessage) {
+        formMessage.textContent = "Thanks. Our team will contact you shortly.";
+      }
+
+      form.reset();
+    });
   });
 }

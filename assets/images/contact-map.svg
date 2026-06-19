@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" role="img" aria-labelledby="title">
+  <title>Map preview</title>
+  <rect width="1200" height="420" fill="#eef5f4"/>
+  <path d="M0 58h1200M0 128h1200M0 198h1200M0 268h1200M0 338h1200" stroke="#d6e8e6" stroke-width="2"/>
+  <path d="M88 0v420M218 0v420M348 0v420M478 0v420M608 0v420M738 0v420M868 0v420M998 0v420M1128 0v420" stroke="#d6e8e6" stroke-width="2"/>
+  <path d="M62 336c120-84 220-68 298-132 88-72 144-42 244-66 106-26 144-126 258-110 92 13 154 62 276 8" fill="none" stroke="#4e97d8" stroke-width="16" stroke-linecap="round"/>
+  <path d="M0 252c80-10 126-52 194-42 102 14 136 94 258 80 98-12 136-90 242-84 96 5 132 76 222 78 88 1 120-47 284-44" fill="none" stroke="#b2dcc6" stroke-width="24" stroke-linecap="round" opacity=".75"/>
+  <path d="M152 62c14 0 22 10 22 23 0 17-22 36-22 36s-22-19-22-36c0-13 8-23 22-23z" fill="#ef6d57"/>
+  <circle cx="152" cy="85" r="7" fill="#fff"/>
+  <path d="M852 168c14 0 22 10 22 23 0 17-22 36-22 36s-22-19-22-36c0-13 8-23 22-23z" fill="#ef6d57"/>
+  <circle cx="852" cy="191" r="7" fill="#fff"/>
+  <path d="M1038 108c14 0 22 10 22 23 0 17-22 36-22 36s-22-19-22-36c0-13 8-23 22-23z" fill="#ef6d57"/>
+  <circle cx="1038" cy="131" r="7" fill="#fff"/>
+  <rect x="28" y="332" width="94" height="64" rx="10" fill="#fff" stroke="#cadfdb"/>
+  <rect x="46" y="346" width="58" height="36" rx="6" fill="#88c8ba"/>
+</svg>
