@@ -798,7 +798,8 @@ body.drawer-open::before {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
 }
 
 .catalogue-card::after {
@@ -810,13 +811,14 @@ body.drawer-open::before {
 }
 
 .catalogue-card-inner {
-  position: relative;
-  z-index: 1;
-  min-height: 184px;
-  display: flex;
-  align-items: end;
-  justify-content: center;
-  padding: 16px 14px 14px;
+    position: relative;
+    z-index: 1;
+    min-height: 549px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    padding: 16px 14px 14px;
+    object-fit: cover;
 }
 
 .catalogue-card-copy {
@@ -1458,7 +1460,7 @@ body.drawer-open::before {
   align-items: center;
   width: max-content;
   gap: 28px;
-  animation: partners-marquee 24s linear infinite;
+  animation: partners-marquee 48s linear infinite;
 }
 
 .partner-logo {
