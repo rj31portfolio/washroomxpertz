@@ -19,25 +19,25 @@ const demoForms = Array.from(document.querySelectorAll("[data-demo-form]"));
 
 const reviews = [
   {
-    avatar: "IK",
-    name: "Inder Kapoor",
-    count: "3 reviews",
-    time: "4 months ago",
-    text: "I turned to Washroom Xpertz to remodel 2 Toilets and Dresser Room at our Apartment in Vipul Belmonte, Golf Course Road, Sector 53 Gurugram. From concept to site supervision, the work got completed on time. The finished product looks more beautiful than projected. Excellent teamwork at Washroom Xpertz helped realise a long cherished desire to upgrade our humble living to 7 stars."
+    avatar: "SS",
+    name: "Shubham Soni",
+    count: "6 reviews",
+    time: "1 week ago",
+    text: "Washroom Xpertz exceeded my expectations in every aspect. From the initial design consultation to the final installation, their professionalism and commitment to quality were outstanding. The finishing was flawless, and their attention to detail was remarkable. If you're looking for a stylish, durable, and perfectly executed washroom renovation, Washroom Xpertz is the right choice."
   },
   {
-    avatar: "RS",
-    name: "Ritu Sharma",
-    count: "7 reviews",
-    time: "6 months ago",
-    text: "The team handled our master bathroom renovation with real professionalism. Design support, material selection, and installation were all coordinated smoothly. We appreciated the clean execution, regular updates, and the premium final finish."
+    avatar: "SK",
+    name: "Sanoj Kumar",
+    count: "1 review",
+    time: "1 week ago",
+    text: "Excellent washroom interior work! The design, tile selection, lighting, and fittings were executed perfectly. The team was professional, completed the project on time, and maintained high-quality standards throughout. The final result exceeded our expectations and gave our washroom a modern, luxurious look. Highly recommended for washroom interior and renovation services."
   },
   {
-    avatar: "AM",
-    name: "Aman Malhotra",
-    count: "5 reviews",
-    time: "8 months ago",
-    text: "Washroom Xpertz transformed two washrooms in our home and delivered exactly the modern look we wanted. Their designers understood the space well, the project stayed on schedule, and the overall service experience felt organised from start to finish."
+    avatar: "RK",
+    name: "Rahul Khanna",
+    count: "4 reviews",
+    time: "2 weeks ago",
+    text: "We hired Washroom Xpertz for a complete bathroom renovation, and the experience was excellent. Their team guided us through every stage, from design planning to installation. The workmanship, quality of materials, and overall finish were truly impressive. We are extremely happy with the final outcome."
   }
 ];
 
