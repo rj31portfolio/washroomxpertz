@@ -10,5 +10,4 @@ and make according to give you ss
 
 in footer
 
-i want to make faq.html page in that page take same header and footer from index.html and that page show faq by filter like given screenshot accroding amke same degn and click to show answer also so make it only this page 
 

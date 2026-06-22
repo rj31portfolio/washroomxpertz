@@ -16,6 +16,9 @@ const cataloguePrev = document.getElementById("cataloguePrev");
 const catalogueNext = document.getElementById("catalogueNext");
 const catalogueDots = document.getElementById("catalogueDots");
 const demoForms = Array.from(document.querySelectorAll("[data-demo-form]"));
+const modalOpeners = Array.from(document.querySelectorAll("[data-modal-open]"));
+const modalClosers = Array.from(document.querySelectorAll("[data-modal-close]"));
+const careerRoleField = document.getElementById("careerRoleField");
 
 const reviews = [
   {
@@ -234,5 +237,48 @@ if (demoForms.length) {
 
       form.reset();
     });
+  });
+}
+
+if (modalOpeners.length || modalClosers.length) {
+  const setModalState = (modal, isOpen) => {
+    if (!modal) {
+      return;
+    }
+
+    modal.hidden = !isOpen;
+    modal.setAttribute("aria-hidden", String(!isOpen));
+    document.body.classList.toggle("modal-open", isOpen);
+  };
+
+  modalOpeners.forEach((opener) => {
+    opener.addEventListener("click", () => {
+      const modal = document.getElementById(opener.getAttribute("data-modal-open"));
+      const role = opener.getAttribute("data-role");
+
+      if (careerRoleField && role) {
+        careerRoleField.value = role;
+      }
+
+      setModalState(modal, true);
+    });
+  });
+
+  modalClosers.forEach((closer) => {
+    closer.addEventListener("click", () => {
+      const modal = document.getElementById(closer.getAttribute("data-modal-close"));
+      setModalState(modal, false);
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape") {
+      return;
+    }
+
+    const openModal = document.querySelector(".career-modal:not([hidden])");
+    if (openModal) {
+      setModalState(openModal, false);
+    }
   });
 }
