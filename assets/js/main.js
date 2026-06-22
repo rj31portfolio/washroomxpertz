@@ -23,7 +23,7 @@ const reviews = [
     name: "Inder Kapoor",
     count: "3 reviews",
     time: "4 months ago",
-    text: "I turned to Bathxpertz to remodel 2 Toilets and Dresser Room at our Apartment in Vipul Belmonte, Golf Course Road, Sector 53 Gurugram. From concept to site supervision, the work got completed on time. The finished product looks more beautiful than projected. Excellent teamwork at Bathxpertz helped realise a long cherished desire to upgrade our humble living to 7 stars."
+    text: "I turned to Washroom Xpertz to remodel 2 Toilets and Dresser Room at our Apartment in Vipul Belmonte, Golf Course Road, Sector 53 Gurugram. From concept to site supervision, the work got completed on time. The finished product looks more beautiful than projected. Excellent teamwork at Washroom Xpertz helped realise a long cherished desire to upgrade our humble living to 7 stars."
   },
   {
     avatar: "RS",
@@ -37,7 +37,7 @@ const reviews = [
     name: "Aman Malhotra",
     count: "5 reviews",
     time: "8 months ago",
-    text: "Bathxpertz transformed two washrooms in our home and delivered exactly the modern look we wanted. Their designers understood the space well, the project stayed on schedule, and the overall service experience felt organised from start to finish."
+    text: "Washroom Xpertz transformed two washrooms in our home and delivered exactly the modern look we wanted. Their designers understood the space well, the project stayed on schedule, and the overall service experience felt organised from start to finish."
   }
 ];
 

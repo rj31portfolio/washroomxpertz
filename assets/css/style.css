@@ -138,6 +138,7 @@ input {
   left: 0;
   width: 100%;
   z-index: 20;
+  background: rgba(8, 8, 8, 0.86);
   transition: background 0.25s ease, box-shadow 0.25s ease, backdrop-filter 0.25s ease;
 }
 
@@ -1654,7 +1655,7 @@ body.drawer-open::before {
 .contact-hero-copy h1 {
   margin: 0 0 16px;
   color: #262829;
-  font-size: clamp(2.2rem, 4.2vw, 3.6rem);
+  font-size: clamp(2.2rem, 4.2vw, 2.5rem);
   line-height: 1.08;
   letter-spacing: -0.04em;
 }

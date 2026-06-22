@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ | Washroom Xpertz</title>
+  <meta name="description" content="Frequently asked questions about Washroom Xpertz bathroom design, delivery, installation, and warranty support.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    body.faq-page {
+      background: #f7f7f3;
+      color: #161616;
+    }
+
+    .faq-header-shell {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at right top, rgba(24, 174, 176, 0.1), transparent 26%),
+        linear-gradient(180deg, #ffffff 0%, #fbfbf7 100%);
+    }
+
+    .faq-page .site-header {
+      background: rgba(8, 8, 8, 0.86);
+      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.22);
+      backdrop-filter: blur(14px);
+    }
+
+    .faq-hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 500px);
+      align-items: center;
+      gap: 48px;
+      min-height: 560px;
+      padding-top: 170px;
+      padding-bottom: 72px;
+    }
+
+    .faq-hero-copy h1 {
+      margin: 0 0 18px;
+      color: #222222;
+      font-size: clamp(2.7rem, 5vw, 4.6rem);
+      line-height: 1.02;
+      letter-spacing: -0.05em;
+    }
+
+    .faq-hero-copy p {
+      max-width: 560px;
+      margin: 0;
+      color: #5d5d5d;
+      font-size: 1.02rem;
+      line-height: 1.8;
+    }
+
+    .faq-hero-visual {
+      position: relative;
+      display: grid;
+      place-items: center;
+      min-height: 380px;
+    }
+
+    .faq-hero-blob {
+      position: absolute;
+      inset: 30px 15px 0 40px;
+      border-radius: 44% 56% 46% 54% / 44% 40% 60% 56%;
+      background:
+        radial-gradient(circle at top left, rgba(24, 174, 176, 0.16), transparent 38%),
+        #eaf7f4;
+    }
+
+    .faq-hero-card {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      gap: clamp(8px, 2vw, 20px);
+      width: 100%;
+      color: #0d8e91;
+      line-height: 0.85;
+    }
+
+    .faq-letters {
+      font-size: clamp(5rem, 15vw, 10rem);
+      font-weight: 800;
+      letter-spacing: -0.08em;
+      text-shadow: 4px 4px 0 #13213f;
+    }
+
+    .faq-person {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .faq-person::before {
+      content: "";
+      position: absolute;
+      inset: auto auto 0;
+      width: 66px;
+      height: 140px;
+      border-radius: 28px 28px 22px 22px;
+      background: var(--person-color);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .faq-person::after {
+      content: "";
+      position: absolute;
+      top: -20px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #f4c39f;
+      box-shadow: inset -6px -4px 0 rgba(0, 0, 0, 0.06);
+    }
+
+    .faq-person span {
+      position: relative;
+      z-index: 1;
+      padding-bottom: 52px;
+    }
+
+    .faq-person-left {
+      --person-color: #ffbf2c;
+      transform: translateY(16px);
+    }
+
+    .faq-person-right {
+      --person-color: #e84c3d;
+      transform: translateY(-8px);
+    }
+
+    .faq-person-small {
+      --person-color: #283a6d;
+      transform: translateY(10px);
+    }
+
+    .faq-main {
+      padding: 0 0 96px;
+    }
+
+    .faq-board {
+      width: min(1180px, calc(100% - 48px));
+      margin: 0 auto;
+      padding: 56px 0 0;
+    }
+
+    .faq-filter-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 14px;
+      margin-bottom: 40px;
+    }
+
+    .faq-filter {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      min-height: 152px;
+      padding: 22px 16px;
+      border: 1px solid rgba(24, 174, 176, 0.45);
+      background: transparent;
+      color: #529fa0;
+      cursor: pointer;
+      transition: background 0.25s ease, color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+    }
+
+    .faq-filter:hover,
+    .faq-filter:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 18px 32px rgba(24, 174, 176, 0.12);
+    }
+
+    .faq-filter.is-active {
+      background: #4b9697;
+      color: #ffffff;
+      box-shadow: 0 18px 32px rgba(75, 150, 151, 0.18);
+    }
+
+    .faq-filter svg {
+      width: 62px;
+      height: 62px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .faq-filter span {
+      font-size: 0.98rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+
+    .faq-list {
+      border-top: 1px solid rgba(22, 22, 22, 0.12);
+    }
+
+    .faq-item {
+      border-bottom: 1px solid rgba(22, 22, 22, 0.12);
+    }
+
+    .faq-question {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      width: 100%;
+      padding: 23px 18px;
+      border: 0;
+      background: transparent;
+      color: #222222;
+      text-align: left;
+      cursor: pointer;
+    }
+
+    .faq-question span:first-child {
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+
+    .faq-toggle {
+      position: relative;
+      flex: 0 0 20px;
+      width: 20px;
+      height: 20px;
+    }
+
+    .faq-toggle::before,
+    .faq-toggle::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 18px;
+      height: 2px;
+      background: #4b4b4b;
+      transform: translate(-50%, -50%);
+      transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+
+    .faq-toggle::after {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+
+    .faq-item.is-open .faq-toggle::after {
+      transform: translate(-50%, -50%) rotate(0deg);
+      opacity: 0;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 18px 24px;
+      color: #616161;
+      font-size: 0.98rem;
+      line-height: 1.8;
+    }
+
+    .faq-item.is-open .faq-answer {
+      display: block;
+    }
+
+    .faq-empty {
+      display: none;
+      padding: 36px 18px 12px;
+      color: #6b6b6b;
+      font-size: 0.98rem;
+    }
+
+    .faq-empty.is-visible {
+      display: block;
+    }
+
+    .faq-page .site-footer {
+      margin-top: 0;
+    }
+
+    @media (max-width: 1100px) {
+      .faq-filter-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 860px) {
+      .faq-hero {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        min-height: auto;
+        padding-top: 150px;
+      }
+
+      .faq-hero-copy {
+        text-align: center;
+      }
+
+      .faq-hero-copy p {
+        margin: 0 auto;
+      }
+
+      .faq-filter-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 640px) {
+      .faq-board {
+        width: min(100% - 28px, 100%);
+        padding-top: 36px;
+      }
+
+      .faq-hero {
+        padding-top: 138px;
+        padding-bottom: 40px;
+      }
+
+      .faq-hero-copy h1 {
+        font-size: 2.4rem;
+      }
+
+      .faq-hero-visual {
+        min-height: 250px;
+      }
+
+      .faq-person::before {
+        width: 48px;
+        height: 102px;
+      }
+
+      .faq-person::after {
+        top: -14px;
+        width: 30px;
+        height: 30px;
+      }
+
+      .faq-person span {
+        padding-bottom: 34px;
+        font-size: 0.68rem;
+      }
+
+      .faq-filter-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .faq-filter {
+        min-height: 126px;
+      }
+
+      .faq-question {
+        padding: 20px 8px;
+      }
+
+      .faq-answer {
+        padding: 0 8px 20px;
+      }
+    }
+  </style>
+</head>
+<body class="faq-page">
+  <header class="faq-header-shell">
+    <div class="site-header" id="siteHeader">
+      <div class="container topbar">
+        <div class="topbar-links">
+          <a href="tel:+918873779202">+91 8873779202</a>
+          <a href="index.html#partner">Partner with Us</a>
+          <a href="index.html#refer">Refer and Earn</a>
+        </div>
+        <a class="consult-btn desktop-only" href="index.html#consult">Free Consult Now</a>
+      </div>
+
+      <div class="container navbar">
+        <a class="brand" href="index.html" aria-label="Washroom Xpertz home">
+          <img src="assets/images/logo-xpert.png" alt="Washroom Xpertz" class="brand-mark">
+        </a>
+
+        <nav class="nav-links" id="navMenu" aria-label="Primary">
+          <a href="about.html">About Us</a>
+          <a href="index.html#about">How We Work</a>
+          <a href="index.html#catalogue">Design Catalogue</a>
+          <a href="faq.html" aria-current="page">FAQ</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button class="menu-btn" type="button" id="menuToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Open menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <aside class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+      <div class="mobile-drawer-inner">
+        <button class="drawer-close" type="button" id="drawerClose" aria-label="Close menu">
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="drawer-nav" aria-label="Mobile">
+          <a href="about.html">About Us</a>
+          <a href="index.html#catalogue">Design Catalogue</a>
+          <a href="index.html#projects">Projects Delivered</a>
+          <a href="faq.html">FAQ</a>
+          <a href="contact.html">Contact Us</a>
+        </nav>
+
+        <a class="drawer-cta" href="index.html#consult">Free Consult Now</a>
+
+        <div class="drawer-social">
+          <p>Follow us</p>
+          <div class="social-list">
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect><circle cx="12" cy="12" r="4.2"></circle><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"></circle></svg>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 20v-6.3h2.4l.4-3h-2.8V8.8c0-.9.3-1.6 1.6-1.6h1.4V4.5c-.3 0-1.1-.1-2.1-.1-2.1 0-3.5 1.3-3.5 3.8v2.5H8.5v3h2.8V20z" fill="currentColor" stroke="none"></path></svg>
+            </a>
+            <a href="#" aria-label="X">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4.5l5.7 7.6L5.4 19.5h2.4l4-5 3.8 5H19l-5.9-7.8 5-7.2h-2.4l-3.6 4.6-3.4-4.6z" fill="currentColor" stroke="none"></path></svg>
+            </a>
+            <a href="#" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12c0 2.1-.2 3.5-.6 4.3-.3.6-.8 1.1-1.5 1.3-.9.3-3 .4-6.9.4s-6-.1-6.9-.4c-.7-.2-1.2-.7-1.5-1.3C3.2 15.5 3 14.1 3 12s.2-3.5.6-4.3c.3-.6.8-1.1 1.5-1.3.9-.3 3-.4 6.9-.4s6 .1 6.9.4c.7.2 1.2.7 1.5 1.3.4.8.6 2.2.6 4.3z" fill="none"></path><path d="M10 8.7v6.6l5.5-3.3z" fill="currentColor" stroke="none"></path></svg>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.2 9.2V19"></path><path d="M6.2 5.8h0"></path><path d="M10.3 19V9.2"></path><path d="M10.3 12.9c0-2.1 1.4-3.7 3.5-3.7 2 0 3.2 1.3 3.2 4V19"></path></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="container faq-hero">
+      <div class="faq-hero-copy">
+        <h1>Have any Questions?</h1>
+        <p>Browse common answers about consultation, pricing, material selection, delivery timelines, and warranty coverage for your bathroom project.</p>
+      </div>
+
+      <div class="faq-hero-visual" aria-hidden="true">
+        <div class="faq-hero-blob"></div>
+        <div class="faq-hero-card">
+          <div class="faq-person faq-person-left"><span>Ask</span></div>
+          <div class="faq-letters">FAQ</div>
+          <div class="faq-person faq-person-right"><span>Help</span></div>
+          <div class="faq-person faq-person-small"><span>Now</span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="faq-main">
+    <section class="faq-board">
+      <div class="faq-filter-grid" role="tablist" aria-label="FAQ categories">
+        <button class="faq-filter is-active" type="button" data-filter="general" role="tab" aria-selected="true">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <rect x="10" y="18" width="30" height="24" rx="6"></rect>
+            <path d="M18 42l-6 8"></path>
+            <circle cx="44" cy="18" r="10"></circle>
+            <path d="M44 14v8"></path>
+            <path d="M44 28h.1"></path>
+            <path d="M18 26h14"></path>
+            <path d="M18 33h10"></path>
+          </svg>
+          <span>General</span>
+        </button>
+        <button class="faq-filter" type="button" data-filter="order" role="tab" aria-selected="false">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M12 16h8l6 25h22l8-18H24"></path>
+            <circle cx="28" cy="49" r="4"></circle>
+            <circle cx="48" cy="49" r="4"></circle>
+            <circle cx="49" cy="16" r="9"></circle>
+            <path d="M45 16l3 3 5-6"></path>
+          </svg>
+          <span>Order</span>
+        </button>
+        <button class="faq-filter" type="button" data-filter="payment" role="tab" aria-selected="false">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M18 26c4-7 15-10 22-6l6 3"></path>
+            <path d="M46 23l8-2v10"></path>
+            <path d="M16 40h10c4 0 7 2 9 5"></path>
+            <path d="M35 45h8c3 0 5-1 6-4l5-14"></path>
+            <path d="M14 28l8-3"></path>
+          </svg>
+          <span>Payment</span>
+        </button>
+        <button class="faq-filter" type="button" data-filter="delivery" role="tab" aria-selected="false">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M10 22h30v18H10z"></path>
+            <path d="M40 28h10l6 8v4H40z"></path>
+            <circle cx="22" cy="46" r="4"></circle>
+            <circle cx="48" cy="46" r="4"></circle>
+            <path d="M18 28l5 5 11-11"></path>
+          </svg>
+          <span>Delivery</span>
+        </button>
+        <button class="faq-filter" type="button" data-filter="warranty" role="tab" aria-selected="false">
+          <svg viewBox="0 0 64 64" aria-hidden="true">
+            <path d="M32 10l18 7v13c0 11-7 20-18 24-11-4-18-13-18-24V17z"></path>
+            <path d="M25 31l5 5 9-11"></path>
+            <path d="M20 49h24"></path>
+          </svg>
+          <span>Warranty</span>
+        </button>
+      </div>
+      <div class="faq-list" id="faqList">
+        <article class="faq-item" data-category="general">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>Do you offer an installation service?</span>
+            <span class="faq-toggle" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            Yes. Washroom Xpertz manages design support, material coordination, and expert installation through trained teams so your project is handled end to end.
+          </div>
+        </article>
+
+        <article class="faq-item" data-category="general">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>How do you ensure the quality of your work?</span>
+            <span class="faq-toggle" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            We work with curated product partners, planned execution steps, and on-site supervision to maintain finish quality, fitting accuracy, and timely coordination.
+          </div>
+        </article>
+
+        <article class="faq-item" data-category="general">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>Why should anybody choose Washroom Xpertz?</span>
+            <span class="faq-toggle" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            Clients choose Washroom Xpertz for one-point coordination, premium bathroom expertise, transparent guidance, and a smoother renovation experience from consultation to completion.
+          </div>
+        </article>
+
+        <article class="faq-item" data-category="general">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>How do you monitor quality?</span>
+            <span class="faq-toggle" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            Every project follows defined checkpoints for material approval, installation review, and final finishing so issues are identified early and resolved before handover.
+          </div>
+        </article>
+
+        <article class="faq-item" data-category="order">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>What kind of designs are provided to customers?</span>
+            <span class="faq-toggle" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            We provide tailored bathroom concepts based on your space, style, budget, and usage needs, including modern, luxury, family, senior-friendly, and utility-focused options.
+          </div>
+        </article>
+
+        <article class="faq-item" data-category="order">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>Who will select materials and how will it get delivered at site?</span>
+            <span class="faq-toggle" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            Our team helps shortlist the right materials with you, then coordinates vendor dispatch and delivery scheduling so products reach the site in sequence for installation.
+          </div>
+        </article>
+
+        <article class="faq-item" data-category="order">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>Who do we contact during work?</span>
+            <span class="faq-toggle" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            You will have a dedicated project contact for updates, approvals, schedule discussions, and any support needed during the execution period.
+          </div>
+        </article>
+
+        <article class="faq-item" data-category="general">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>How many cities is Washroom Xpertz operational in?</span>
+            <span class="faq-toggle" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            Service coverage can vary by project type and partner network. Contact the team with your city and requirement, and they will confirm availability and next steps.
+          </div>
+        </article>
+
+        <article class="faq-item" data-category="warranty">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>What happens if the service provider damages anything?</span>
+            <span class="faq-toggle" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            Any site issue should be reported to the project coordinator immediately. The team reviews the case, verifies responsibility, and arranges corrective action as per the agreed scope.
+          </div>
+        </article>
+
+        <article class="faq-item" data-category="warranty">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>Are your service providers qualified?</span>
+            <span class="faq-toggle" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            Yes. Washroom Xpertz works with experienced installation and execution partners selected for bathroom-specific work, finish discipline, and coordination standards.
+          </div>
+        </article>
+
+        <article class="faq-item" data-category="order">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>Can I use my own materials for the service?</span>
+            <span class="faq-toggle" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            In many cases, yes. Share the product list in advance so the team can confirm compatibility, quantities, installation readiness, and any impact on timelines or warranty support.
+          </div>
+        </article>
+
+        <article class="faq-item" data-category="payment">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>How is payment scheduled for a bathroom project?</span>
+            <span class="faq-toggle" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            Payments are usually divided across booking, material confirmation, and execution milestones. The exact schedule depends on project scope and is shared before work begins.
+          </div>
+        </article>
+
+        <article class="faq-item" data-category="payment">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>Will I get a clear estimate before starting?</span>
+            <span class="faq-toggle" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            Yes. After understanding your requirement, the team shares a project estimate covering relevant products, service components, and execution expectations.
+          </div>
+        </article>
+
+        <article class="faq-item" data-category="delivery">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>How long does delivery usually take?</span>
+            <span class="faq-toggle" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            Delivery timelines depend on the selected materials, vendor lead times, and site readiness. Once products are finalized, the team maps expected delivery windows for you.
+          </div>
+        </article>
+
+        <article class="faq-item" data-category="delivery">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>Do you coordinate site delivery and unloading?</span>
+            <span class="faq-toggle" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            Yes. Delivery is coordinated with the project schedule so materials arrive when needed, reducing clutter, delay, and handling risk at site.
+          </div>
+        </article>
+
+        <article class="faq-item" data-category="warranty">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>Is warranty available on products and workmanship?</span>
+            <span class="faq-toggle" aria-hidden="true"></span>
+          </button>
+          <div class="faq-answer">
+            Warranty support depends on the specific products used and the agreed service scope. The team explains applicable product warranties and workmanship coverage during finalization.
+          </div>
+        </article>
+      </div>
+
+      <p class="faq-empty" id="faqEmpty">No FAQs are available in this category right now.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <img class="footer-bg-media" src="assets/images/bg-footer.jpg" alt="Washroom Xpertz footer background">
+    <div class="footer-overlay"></div>
+    <div class="container footer-grid">
+      <div class="footer-brand-block">
+        <a class="footer-brand" href="index.html" aria-label="Washroom Xpertz home">
+          <img src="assets/images/logo-xpert.png" alt="Washroom Xpertz" class="brand-mark footer-brand-mark">
+        </a>
+        <div class="footer-contact">
+          <p>
+            H No. 227-A, Vill- Samaspur,<br>
+            Sector-51, Gurugram,<br>
+            Haryana - 122018
+          </p>
+          <a href="mailto:greenlivinterior@gmail.com">greenlivinterior@gmail.com</a>
+          <a href="tel:+918873779202">+91 8873779202</a>
+          <a href="tel:+918527827427">+91 8527827427</a>
+        </div>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect><circle cx="12" cy="12" r="4.2"></circle><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"></circle></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 20v-6.3h2.4l.4-3h-2.8V8.8c0-.9.3-1.6 1.6-1.6h1.4V4.5c-.3 0-1.1-.1-2.1-.1-2.1 0-3.5 1.3-3.5 3.8v2.5H8.5v3h2.8V20z" fill="currentColor" stroke="none"></path></svg>
+          </a>
+          <a href="#" aria-label="X">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4.5l5.7 7.6L5.4 19.5h2.4l4-5 3.8 5H19l-5.9-7.8 5-7.2h-2.4l-3.6 4.6-3.4-4.6z" fill="currentColor" stroke="none"></path></svg>
+          </a>
+          <a href="#" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12c0 2.1-.2 3.5-.6 4.3-.3.6-.8 1.1-1.5 1.3-.9.3-3 .4-6.9.4s-6-.1-6.9-.4c-.7-.2-1.2-.7-1.5-1.3C3.2 15.5 3 14.1 3 12s.2-3.5.6-4.3c.3-.6.8-1.1 1.5-1.3.9-.3 3-.4 6.9-.4s6 .1 6.9.4c.7.2 1.2.7 1.5 1.3.4.8.6 2.2.6 4.3z" fill="none"></path><path d="M10 8.7v6.6l5.5-3.3z" fill="currentColor" stroke="none"></path></svg>
+          </a>
+          <a href="#" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.2 9.2V19"></path><path d="M6.2 5.8h0"></path><path d="M10.3 19V9.2"></path><path d="M10.3 12.9c0-2.1 1.4-3.7 3.5-3.7 2 0 3.2 1.3 3.2 4V19"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-links-block">
+        <h3>Our Work</h3>
+        <a href="index.html#catalogue">Design Catalogue</a>
+        <a href="index.html#consult">Pricing Calculator</a>
+        <a href="index.html#projects">Completed Projects</a>
+        <a href="index.html#projects">Customer Testimonials</a>
+      </div>
+
+      <div class="footer-links-block">
+        <h3>Company</h3>
+        <a href="about.html">About Us</a>
+        <a href="index.html#about">Our Process</a>
+        <a href="index.html#why-washroom-xpertz">Xpertz Advantages</a>
+        <a href="faq.html">FAQs</a>
+        <a href="index.html#contact">Blog</a>
+      </div>
+
+      <div class="footer-links-block">
+        <h3>For You</h3>
+        <a href="index.html#consult">Pay</a>
+        <a href="index.html#contact">Privacy Policy</a>
+        <a href="index.html#contact">Return Policy</a>
+        <a href="index.html#contact">Terms &amp; Conditions</a>
+        <a href="index.html#contact">Html sitemap</a>
+      </div>
+
+      <div class="footer-links-block">
+        <h3>Get in Touch</h3>
+        <a href="index.html#contact">Career</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="index.html#refer">Refer and Earn</a>
+        <a href="index.html#partner">Partner with Us</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>@2026. All Rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    const faqFilters = Array.from(document.querySelectorAll(".faq-filter"));
+    const faqItems = Array.from(document.querySelectorAll(".faq-item"));
+    const faqEmpty = document.getElementById("faqEmpty");
+
+    const closeItem = (item) => {
+      item.classList.remove("is-open");
+      const button = item.querySelector(".faq-question");
+      if (button) {
+        button.setAttribute("aria-expanded", "false");
+      }
+    };
+
+    const openItem = (item) => {
+      const visibleItems = faqItems.filter((entry) => entry.style.display !== "none");
+      visibleItems.forEach((entry) => {
+        if (entry !== item) {
+          closeItem(entry);
+        }
+      });
+
+      item.classList.add("is-open");
+      const button = item.querySelector(".faq-question");
+      if (button) {
+        button.setAttribute("aria-expanded", "true");
+      }
+    };
+
+    const filterFaqs = (category) => {
+      let visibleCount = 0;
+
+      faqItems.forEach((item, index) => {
+        const matches = item.dataset.category === category;
+        item.style.display = matches ? "" : "none";
+        closeItem(item);
+
+        if (matches) {
+          visibleCount += 1;
+          if (visibleCount === 1 && index >= 0) {
+            openItem(item);
+          }
+        }
+      });
+
+      if (faqEmpty) {
+        faqEmpty.classList.toggle("is-visible", visibleCount === 0);
+      }
+    };
+
+    faqFilters.forEach((filter) => {
+      filter.addEventListener("click", () => {
+        faqFilters.forEach((entry) => {
+          entry.classList.remove("is-active");
+          entry.setAttribute("aria-selected", "false");
+        });
+
+        filter.classList.add("is-active");
+        filter.setAttribute("aria-selected", "true");
+        filterFaqs(filter.dataset.filter);
+      });
+    });
+
+    faqItems.forEach((item) => {
+      const button = item.querySelector(".faq-question");
+
+      if (!button) {
+        return;
+      }
+
+      button.addEventListener("click", () => {
+        const isOpen = item.classList.contains("is-open");
+        if (isOpen) {
+          closeItem(item);
+        } else {
+          openItem(item);
+        }
+      });
+    });
+
+    filterFaqs("general");
+  </script>
+</body>
+</html>
