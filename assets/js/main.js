@@ -50,8 +50,21 @@ let activeCatalogueIndex = 0;
 let catalogueTimerId = null;
 
 if (siteHeader) {
+  let lastScrollY = window.scrollY;
+
   const syncHeaderState = () => {
-    siteHeader.classList.toggle("is-scrolled", window.scrollY > 24);
+    const currentScrollY = window.scrollY;
+    const isScrolled = currentScrollY > 24;
+    const isScrollingDown = currentScrollY > lastScrollY && currentScrollY > 120;
+
+    siteHeader.classList.toggle("is-scrolled", isScrolled);
+    siteHeader.classList.toggle("is-hidden", isScrollingDown);
+
+    if (currentScrollY <= 24) {
+      siteHeader.classList.remove("is-hidden");
+    }
+
+    lastScrollY = currentScrollY;
   };
 
   syncHeaderState();
@@ -238,6 +251,129 @@ if (demoForms.length) {
       form.reset();
     });
   });
+}
+
+const accordionRoots = Array.from(document.querySelectorAll("[data-simple-accordion]"));
+
+if (accordionRoots.length) {
+  accordionRoots.forEach((root) => {
+    const items = Array.from(root.querySelectorAll("[data-accordion-item]"));
+
+    const closeItem = (item) => {
+      item.classList.remove("is-open");
+      const trigger = item.querySelector("[data-accordion-trigger]");
+      if (trigger) {
+        trigger.setAttribute("aria-expanded", "false");
+      }
+    };
+
+    const openItem = (item) => {
+      items.forEach((entry) => {
+        if (entry !== item) {
+          closeItem(entry);
+        }
+      });
+
+      item.classList.add("is-open");
+      const trigger = item.querySelector("[data-accordion-trigger]");
+      if (trigger) {
+        trigger.setAttribute("aria-expanded", "true");
+      }
+    };
+
+    items.forEach((item, index) => {
+      const trigger = item.querySelector("[data-accordion-trigger]");
+
+      if (!trigger) {
+        return;
+      }
+
+      if (item.classList.contains("is-open")) {
+        openItem(item);
+      } else {
+        closeItem(item);
+      }
+
+      trigger.addEventListener("click", () => {
+        const isOpen = item.classList.contains("is-open");
+
+        if (isOpen) {
+          closeItem(item);
+          return;
+        }
+
+        openItem(item);
+      });
+
+      if (index === 0 && !items.some((entry) => entry.classList.contains("is-open"))) {
+        openItem(item);
+      }
+    });
+  });
+}
+
+const catalogueBrowser = document.querySelector("[data-catalogue-browser]");
+
+if (catalogueBrowser) {
+  const filterButtons = Array.from(catalogueBrowser.querySelectorAll("[data-catalogue-filter]"));
+  const cards = Array.from(catalogueBrowser.querySelectorAll("[data-catalogue-card]"));
+  const seeMoreButton = catalogueBrowser.querySelector("[data-catalogue-more]");
+  const emptyState = catalogueBrowser.querySelector(".catalogue-empty-state");
+  const visibleCount = Number(catalogueBrowser.getAttribute("data-visible-count")) || 4;
+  let activeFilter = "all";
+  let expanded = false;
+
+  const renderCatalogueCards = () => {
+    const matchingCards = cards.filter((card) => {
+      const category = card.getAttribute("data-catalogue-card");
+      return activeFilter === "all" || category === activeFilter;
+    });
+
+    cards.forEach((card) => {
+      card.hidden = true;
+    });
+
+    matchingCards.forEach((card, index) => {
+      card.hidden = !expanded && index >= visibleCount;
+    });
+
+    if (emptyState) {
+      emptyState.hidden = matchingCards.length !== 0;
+    }
+
+    if (seeMoreButton) {
+      if (matchingCards.length <= visibleCount) {
+        seeMoreButton.hidden = true;
+      } else {
+        seeMoreButton.hidden = false;
+        seeMoreButton.textContent = expanded ? "Show Less" : "See More";
+      }
+    }
+  };
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      activeFilter = button.getAttribute("data-catalogue-filter") || "all";
+      expanded = false;
+
+      filterButtons.forEach((entry) => {
+        const isActive = entry === button;
+        entry.classList.toggle("is-active", isActive);
+        entry.setAttribute("aria-pressed", String(isActive));
+      });
+
+      renderCatalogueCards();
+    });
+  });
+
+  if (seeMoreButton) {
+    seeMoreButton.addEventListener("click", () => {
+      expanded = !expanded;
+      renderCatalogueCards();
+    });
+  }
+
+  renderCatalogueCards();
 }
 
 if (modalOpeners.length || modalClosers.length) {
