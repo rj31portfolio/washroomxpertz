@@ -10,33 +10,20 @@ and make according to give you ss
 
 in footer
 
+*Daily Website Development Report*
+*Date:* 24/06/2026
+*Name:* Raju Ali
+*Project Name:* ABC Company Website
 
-Daily Website Development Report
-Date: 22/06/2026
-Name: Raju Ali
-Project Name: Washroom Xpertz
+*Today’s Work Completed:*- 5 category Product update almost 60 project
 
-Today’s Work Completed:-
+*Work In Progress:*- work on project add 
 
-Work In Progress:-
+*Issues / Challenges:*-No
 
-Issues / Challenges:-
+*Feedback Call Update:*-0
 
-Feedback Call Update:-
-
-Pending From Client / Team:-
-
-
-
-Daily Website Development Report
-Date: 22/06/2026
-Name: Raju Ali
-Project Name: Washroom Xpertz
-Work In Progress:- faq page , career page ,
-https://washroomxpertz.netlify.app/
-changes other pages desgn 
-Issues / Challenges:-  No 
-Feedback Call Update:- 1 call for chnages website
-Pending From Client :- Mydera Product Images 
-Also Manage Google ads 
+*Pending From Client / Team:*- Na
+*Google Ads* - Ads Manages
  
+in catalogue.html that page new catgory projects card show according i give you screenshot and dont update any other card its show only for Senior Citizen Washrooms this catgory so make it 
