@@ -27,3 +27,5 @@ in footer
 *Google Ads* - Ads Manages
  
 in catalogue.html that page new catgory projects card show according i give you screenshot and dont update any other card its show only for Senior Citizen Washrooms this catgory so make it 
+
+

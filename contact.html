@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body class="contact-page">
   <header class="contact-hero-shell">
@@ -146,7 +147,7 @@
 
         <div class="contact-form-panel">
           <h2>Fill the form to get in touch</h2>
-          <form class="contact-form" data-demo-form>
+          <form class="contact-form" data-demo-form data-form-endpoint="form-handler.php" data-form-type="contact">
             <div class="contact-form-grid">
               <label>
                 <span class="sr-only">Name</span>

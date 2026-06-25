@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body class="career-page">
   <header class="career-hero-shell">
@@ -380,7 +381,7 @@
       <h2 id="careerModalTitle">Apply at Washroom Xpertz</h2>
       <p>Share your details and preferred role. Our team will contact you for the next hiring step.</p>
 
-      <form class="contact-form" data-demo-form>
+      <form class="contact-form" data-demo-form data-form-endpoint="form-handler.php" data-form-type="career">
         <div class="contact-form-grid">
           <label>
             <span class="sr-only">Full Name</span>

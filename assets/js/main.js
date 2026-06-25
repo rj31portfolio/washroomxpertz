@@ -240,15 +240,94 @@ if (menuToggle && mobileDrawer) {
 if (demoForms.length) {
   demoForms.forEach((form) => {
     const formMessage = form.querySelector(".form-note") || document.getElementById(form.getAttribute("aria-describedby") || "");
+    const formEndpoint = form.getAttribute("data-form-endpoint");
+    const formType = form.getAttribute("data-form-type");
 
-    form.addEventListener("submit", (event) => {
+    form.addEventListener("submit", async (event) => {
       event.preventDefault();
 
-      if (formMessage) {
-        formMessage.textContent = "Thanks. Our team will contact you shortly.";
+      if (!formEndpoint || !formType) {
+        if (formMessage) {
+          formMessage.textContent = "Thanks. Our team will contact you shortly.";
+        }
+
+        form.reset();
+        return;
       }
 
-      form.reset();
+      const submitButton = form.querySelector('[type="submit"]');
+      const originalButtonText = submitButton ? submitButton.textContent : "";
+      const formData = Object.fromEntries(new FormData(form).entries());
+
+      if (formMessage) {
+        formMessage.textContent = "";
+      }
+
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = "Submitting...";
+      }
+
+      try {
+        const response = await fetch(formEndpoint, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            form_type: formType,
+            ...formData,
+          }),
+        });
+
+        const result = await response.json();
+
+        if (!response.ok || !result.success) {
+          throw new Error(result.message || "Unable to submit the form right now.");
+        }
+
+        if (formMessage) {
+          formMessage.textContent = result.message;
+        }
+
+        if (window.Swal) {
+          await window.Swal.fire({
+            icon: "success",
+            title: "Submitted",
+            text: result.message,
+            confirmButtonColor: "#0d5c63",
+          });
+        }
+
+        form.reset();
+
+        const openModal = form.closest(".career-modal");
+        if (openModal) {
+          openModal.hidden = true;
+          openModal.setAttribute("aria-hidden", "true");
+          document.body.classList.remove("modal-open");
+        }
+      } catch (error) {
+        const message = error instanceof Error ? error.message : "Unable to submit the form right now.";
+
+        if (formMessage) {
+          formMessage.textContent = message;
+        }
+
+        if (window.Swal) {
+          await window.Swal.fire({
+            icon: "error",
+            title: "Submission failed",
+            text: message,
+            confirmButtonColor: "#0d5c63",
+          });
+        }
+      } finally {
+        if (submitButton) {
+          submitButton.disabled = false;
+          submitButton.textContent = originalButtonText;
+        }
+      }
     });
   });
 }

@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body class="home-page">
   <header class="hero-shell">
@@ -98,7 +99,7 @@
 
       <div class="lead-card" id="consult">
         <h2>Your Perfect Bathroom Is Just a Click Away</h2>
-        <form class="lead-form" data-demo-form>
+        <form class="lead-form" data-demo-form data-form-endpoint="form-handler.php" data-form-type="hero">
           <div class="input-row">
             <label>
               <span class="sr-only">First Name</span>
